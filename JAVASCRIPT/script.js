@@ -19,7 +19,7 @@ function secondsToMinutesSeconds(seconds) {
 let CreateBrowse_btn = Array.from(document.getElementsByClassName("create-browse"));
 CreateBrowse_btn.forEach(btn => {
     btn.addEventListener("click", () => {
-        addSongs("Your Library");
+        addSongs("Your-Library");
     });
 });
 
@@ -365,7 +365,7 @@ let trending_cards = Array.from(document.querySelectorAll(".trending-card"));
 trending_cards.forEach(element => [
     element.addEventListener("click", async () => {
         let index = trending_cards.indexOf(element);
-        let songs = await getSongs("Trending Songs");
+        let songs = await getSongs("Trending-Songs");
         let Name = songs[index].split("mixkit-")[1].replaceAll("-", " ").replaceAll("%20", "").toUpperCase();
         let song_name = Name.slice(0, Name.length - 4);
         playbar.classList.remove("hide");
