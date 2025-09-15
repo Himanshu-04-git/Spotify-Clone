@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.border{
+    border: 2px solid white;
+}
+.flex{
+    display: flex;
+}
+
+.justify-content{
+    justify-content: center;
+}
+
+.align-items{
+    align-items: center;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+#small , .small{
+    font-size: 14px;
+}
+
+.light-color{
+    color: rgb(179, 179, 179);
+}
+
+.white{
+    color: #fff;
+}
+
+.black{
+    color: #000;
+}
+
+.bold{
+    font-weight: bolder;
+}
+
+.align-self{
+    align-self: flex-end;
+}
+
+.underline:hover{
+    text-decoration: underline;
+    text-decoration-color: #fff;
+}
+
+.inline-flex{
+    display: inline-flex;
+}
+
+.dx-small{
+    font-size: 13px;
+}
+
+.sizeup:hover{
+    transform: scale(1.2);
+    transition: transform 200ms ease 0s;
+}
+
+.small-width{
+    width: 90%;
+}
+
+.invert{
+    filter: invert(1);
+}
+
+.increase{
+    transform: scale(1.2);
+}
+
+.pad-0{
+    padding: 5px 10px;
+}
+
+.hide{
+    display: none;
+}
+
+.text-align{
+    text-align: center;
+}
+
+.width{
+    width: 300px;
+}
+
+.none{
+    display: block;
+}
