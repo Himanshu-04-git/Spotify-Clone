@@ -350,6 +350,33 @@ displayArtist("Artist-9", "Yo Yo Honey Singh");
 displayArtist("Artist-10", "Shankar Mahadevan");
 
 
+function displayPlaylist(Image,Playlist_name){
+    document.getElementsByClassName("cards")[2].innerHTML += `<div class="card">
+                        <img src="Assets/Images/Image/${Image}.jpeg" alt="lorem">
+                        <div class="white underline">${Playlist_name}</div>Artist_Name</div>
+                        <div class="play-button cursor-pointer">
+                            <svg data-encore-id="icon" role="img" aria-hidden="true"
+                                class="e-91000-icon e-91000-baseline" viewBox="0 0 24 24">
+                                <path
+                                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>`;
+}
+
+
+displayPlaylist("Image-1","Angry mood");
+displayPlaylist("Image-2","Angry mood");
+displayPlaylist("Image-3","Angry mood");
+displayPlaylist("Image-4","Angry mood");
+displayPlaylist("Image-5","Angry mood");
+displayPlaylist("Image-6","Angry mood");
+displayPlaylist("Image-7","Angry mood");
+displayPlaylist("Image-8","Angry mood");
+displayPlaylist("Image-9","Angry mood");
+displayPlaylist("Image-10","Angry mood");
+
 let card = Array.from(document.getElementsByClassName("card"));
 
 card.forEach(cardCont => {
