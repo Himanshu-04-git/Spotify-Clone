@@ -92,7 +92,9 @@ audio.addEventListener("timeupdate", () => {
 const PlayMusic = async (track) => {
     play_btn.src = "Assets/Images/SVG/pause.svg";
     let songs = await getSongs(currFolder);
-    audio.volume = 0.6;
+    if (!audio.volume) {
+        audio.volume = 0.6;
+    }
 
     for (const song of songs) {
         let songName = song.split("mixkit-")[1].replaceAll("-", " ").replaceAll("%20", "").toUpperCase().trim();
@@ -197,29 +199,28 @@ document.querySelectorAll(".show-btn").forEach(element => {
             let parent = element.parentElement.parentElement;
             parent.querySelector(".cards").setAttribute("style", "display: flex; flex-wrap: wrap; justify-content: center; overflow-x: visible;");
             element.innerHTML = "Close all";
-            parent.querySelectorAll(".card").forEach(elem=>{
-                elem.setAttribute("style","width: 260px;")
+            parent.querySelectorAll(".card").forEach(elem => {
+                elem.setAttribute("style", "width: 260px;")
             })
-            parent.querySelectorAll(".play-button").forEach(elem=>{
-                elem.setAttribute("style","top: 219px; right: 25px;");
+            parent.querySelectorAll(".play-button").forEach(elem => {
+                elem.setAttribute("style", "top: 219px; right: 25px;");
             })
-            parent.querySelectorAll(".play-hover").forEach(elem=>{
-                elem.setAttribute("style","top: 215px");
+            parent.querySelectorAll(".play-hover").forEach(elem => {
+                elem.setAttribute("style", "top: 215px");
             })
         }
         else {
             let parent = element.parentElement.parentElement;
             parent.querySelector(".cards").setAttribute("style", "display: flex; flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto;");
             element.innerHTML = "Show all";
-            parent.querySelectorAll(".card").forEach(elem=>{
-                elem.setAttribute("style","width: 192px;")
+            parent.querySelectorAll(".card").forEach(elem => {
+                elem.setAttribute("style", "width: 192px;")
             })
-            parent.querySelectorAll(".play-button").forEach(elem=>{
-                
-                elem.setAttribute("style","top: 134px; right: 15px;");
+            parent.querySelectorAll(".play-button").forEach(elem => {
+                elem.setAttribute("style", "top: 134px; right: 15px;");
             })
-            parent.querySelectorAll(".play-hover").forEach(elem=>{
-                elem.setAttribute("style","top: 130px");
+            parent.querySelectorAll(".play-hover").forEach(elem => {
+                elem.setAttribute("style", "top: 130px");
             })
         }
     })
@@ -290,7 +291,7 @@ document.querySelector(".vol").addEventListener("click", () => {
     else {
         document.querySelector(".vol").src = `Assets/Images/SVG/volume.svg`;
         audio.volume = 0.6;
-         document.querySelector(".volume").getElementsByTagName("input")[0].value = 55;
+        document.querySelector(".volume").getElementsByTagName("input")[0].value = 55;
     }
 })
 

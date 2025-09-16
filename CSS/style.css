@@ -801,6 +801,10 @@ footer .list ul li:first-child:hover {
     .toogle {
         display: none;
     }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
 }
 
 @media (max-width: 655px) {
@@ -871,20 +875,17 @@ footer .list ul li:first-child:hover {
     }
 
     .trending-songs {
-        padding: 30px 15px;
+        padding: 20px 15px;
+        padding-bottom: 0px;
     }
 
     .trending-songs .trending {
         justify-content: space-between;
-        margin: 5px 4vw;
+        margin: 2px 1%;
     }
 
     .cards {
         justify-content: flex-start;
-    }
-
-    .card {
-        margin: auto;
     }
 
     .playbar {
