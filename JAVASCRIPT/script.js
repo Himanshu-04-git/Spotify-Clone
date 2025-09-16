@@ -339,15 +339,15 @@ function displayArtist(Image, Artist_Name) {
 }
 
 displayArtist("Artist-1", "Pritam");
-displayArtist("Artist-2", "Pritam");
-displayArtist("Artist-3", "Pritam");
+displayArtist("Artist-2", "A.R. Rahman");
+displayArtist("Artist-3", "Arijit Singh");
 displayArtist("Artist-4", "Pritam");
-displayArtist("Artist-5", "Pritam");
-displayArtist("Artist-6", "Pritam");
+displayArtist("Artist-5", "Vishal Dadlani");
+displayArtist("Artist-6", "Atif Aslam");
 displayArtist("Artist-7", "Pritam");
-displayArtist("Artist-8", "Pritam");
-displayArtist("Artist-9", "Pritam");
-displayArtist("Artist-10", "Pritam");
+displayArtist("Artist-8", "Udit Narayana");
+displayArtist("Artist-9", "Yo Yo Honey Singh");
+displayArtist("Artist-10", "Shankar Mahadevan");
 
 
 let card = Array.from(document.getElementsByClassName("card"));
