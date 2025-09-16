@@ -27,7 +27,7 @@ CreateBrowse_btn.forEach(btn => {
 let currFolder;
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch(`/Assets/songs/${currFolder}`);
+    let a = await fetch(`/Assets/Songs/${currFolder}`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
