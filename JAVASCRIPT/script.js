@@ -353,7 +353,8 @@ displayArtist("Artist-10", "Shankar Mahadevan");
 function displayPlaylist(Image,Playlist_name){
     document.getElementsByClassName("cards")[2].innerHTML += `<div class="card">
                         <img src="Assets/Images/Image/${Image}.jpeg" alt="lorem">
-                        <div class="white underline">${Playlist_name}</div>Artist_Name</div>
+                        <div class="white underline">${Playlist_name}</div>
+                        <div class="small small-width bold light-color underline">Playlist</div>
                         <div class="play-button cursor-pointer">
                             <svg data-encore-id="icon" role="img" aria-hidden="true"
                                 class="e-91000-icon e-91000-baseline" viewBox="0 0 24 24">
@@ -381,6 +382,8 @@ let card = Array.from(document.getElementsByClassName("card"));
 
 card.forEach(cardCont => {
     let btn = cardCont.querySelector(".play-button");
+    if (!btn) return;
+
     cardCont.addEventListener("mouseover", () => {
         btn.classList.add("play-hover");
     });

@@ -101,3 +101,7 @@
 .none{
     display: block;
 }
+
+.playlist-name{
+    color: white;
+}
