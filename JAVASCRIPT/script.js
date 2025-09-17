@@ -24,22 +24,19 @@ CreateBrowse_btn.forEach(btn => {
 });
 
 
+let TrendingSongs = [
+    "/Assets/Songs/Trending-Songs/01-mixkit-For-A-Reason.mp3", "/Assets/Songs/Trending-Songs/02-mixkit-Arz-Kiya-Hai.mp3", "/Assets/Songs/Trending-Songs/03-mixkit-Oorum-Blood.mp3", "/Assets/Songs/Trending-Songs/04-mixkit-Deewaniyat.mp3", "/Assets/Songs/Trending-Songs/05-mixkit-Jutti-Meri.mp3","/Assets/Songs/Trending-Songs/06-mixkit-SHERIYA.mp3","/Assets/Songs/Trending-Songs/07-mixkit-AZUL.mp3","/Assets/Songs/Trending-Songs/08-mixkit-Pal-Pal.mp3","/Assets/Songs/Trending-Songs/09-mixkit-Guzzara.mp3","/Assets/Songs/Trending-Songs/10-mixkit-badli-si-hawa-hag.mp3"
+];
+
+let YourLibrary = [
+    "/Assets/Songs/Your-Library/mixkit-a-very-happy-christmas.mp3","/Assets/Songs/Your-Library/mixkit-hip-hop.mp3","/Assets/Songs/Your-Library/mixkit-serene-view.mp3"
+];
+
 let currFolder;
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch(`/Assets/Songs/${currFolder}`);
-    let response = await a.text();
-    let div = document.createElement("div");
-    div.innerHTML = response;
-
-    let song = [];
-    let as = Array.from(div.getElementsByTagName("a"));
-    as.forEach(a => {
-        if (a.href.endsWith(".mp3")) {
-            song.push(a.href);
-        }
-    });
-    return song;
+    if(currFolder === "Trending-Songs") return TrendingSongs;
+    if(currFolder === "Your-Library") return YourLibrary;
 }
 
 
@@ -350,7 +347,7 @@ displayArtist("Artist-9", "Yo Yo Honey Singh");
 displayArtist("Artist-10", "Shankar Mahadevan");
 
 
-function displayPlaylist(Image,Playlist_name){
+function displayPlaylist(Image, Playlist_name) {
     document.getElementsByClassName("cards")[2].innerHTML += `<div class="card">
                         <img src="Assets/Images/Image/${Image}.jpeg" alt="lorem">
                         <div class="white underline">${Playlist_name}</div>
@@ -367,16 +364,16 @@ function displayPlaylist(Image,Playlist_name){
 }
 
 
-displayPlaylist("Image-1","Angry mood");
-displayPlaylist("Image-2","Angry mood");
-displayPlaylist("Image-3","Angry mood");
-displayPlaylist("Image-4","Angry mood");
-displayPlaylist("Image-5","Angry mood");
-displayPlaylist("Image-6","Angry mood");
-displayPlaylist("Image-7","Angry mood");
-displayPlaylist("Image-8","Angry mood");
-displayPlaylist("Image-9","Angry mood");
-displayPlaylist("Image-10","Angry mood");
+displayPlaylist("Image-1", "Angry mood");
+displayPlaylist("Image-2", "Angry mood");
+displayPlaylist("Image-3", "Angry mood");
+displayPlaylist("Image-4", "Angry mood");
+displayPlaylist("Image-5", "Angry mood");
+displayPlaylist("Image-6", "Angry mood");
+displayPlaylist("Image-7", "Angry mood");
+displayPlaylist("Image-8", "Angry mood");
+displayPlaylist("Image-9", "Angry mood");
+displayPlaylist("Image-10", "Angry mood");
 
 let card = Array.from(document.getElementsByClassName("card"));
 
