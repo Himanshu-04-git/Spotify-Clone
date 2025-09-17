@@ -537,9 +537,9 @@ main {
 .seekbar {
     width: 98%;
     height: 8px;
-    margin: 0px 12px;
     position: absolute;
     bottom: 5px;
+    right: 20px;
     background-color: #223975;
     border-radius: 5px;
 }
@@ -550,7 +550,7 @@ main {
     border-radius: 6px;
     background-color: aqua;
     position: absolute;
-    top: -50%;
+    top: -30%;
     left: 0%;
     transition: left 0.5s;
 }
@@ -862,7 +862,8 @@ footer .list ul li:first-child:hover {
     }
 
     .seekbar {
-        width: 90%;
+        width: 92%;
+        left: 14px;
     }
 
     .SongInfo {
